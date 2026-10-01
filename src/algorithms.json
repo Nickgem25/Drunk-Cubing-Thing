@@ -1,0 +1,30 @@
+[
+    {
+        "id": "pll-t-perm",
+        "name": "T-Perm",
+        "category": "PLL",
+        "alg": "R U R' U' R' F R2 U' R' U' R U R' F'",
+        "notes": "Watch the thumb regrip on the F move."
+    },
+    {
+        "id": "pll-y-perm",
+        "name": "Y-Perm",
+        "category": "PLL",
+        "alg": "F R U' R' U' R U R' F' R U R' U' R' F R F'",
+        "notes": "Starts with F (R U' R' U')."
+    },
+    {
+        "id": "oll-27-sune",
+        "name": "OLL 27 (Sune)",
+        "category": "OLL",
+        "alg": "R U R' U R U2 R'",
+        "notes": "Classic Sune. Fish pointing bottom-left."
+    },
+    {
+        "id": "oll-21-h",
+        "name": "OLL 21 (H)",
+        "category": "OLL",
+        "alg": "R U2 R' U' R U R' U' R U' R'",
+        "notes": "Your note here."
+    }
+]

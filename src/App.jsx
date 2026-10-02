@@ -138,7 +138,7 @@ export default function App() {
     <div className="app">
       {/* Sidebar: title + navigation (bottom bar on phones) */}
       <aside className="sidebar">
-        <h1 className="title">Drunk Cubing Manager</h1>
+        <h1 className="title">Nick's Cube Algs</h1>
         <nav className="nav">
           <button className={tabClass(view === 'library')} onClick={() => setView('library')}>Library</button>
           <button className={tabClass(view === 'trainer')} onClick={() => setView('trainer')}>

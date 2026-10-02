@@ -171,6 +171,7 @@ export default function Trainer({ algorithms, ids, solves, onRecord, onDeleteLas
 
   const hasSolveForCase = current ? solves.some((s) => s.id === current.alg.id) : false;
   const showStats = isMobile && mobileTab === 'stats';
+  const revealed = phase === 'stopped'; // the case diagram is hidden until you stop the timer
 
   const emptyState = (
     <div className="trainer-empty">
@@ -181,63 +182,66 @@ export default function Trainer({ algorithms, ids, solves, onRecord, onDeleteLas
 
   // The whole box is the timer: hold anywhere on it. data-phase drives the colours in CSS
   const trainerBox = current && (
-      <div
-        className="trainer-zone"
-        data-phase={phase}
-        onPointerDown={press}
-        onPointerUp={release}
-        onPointerCancel={cancelHold}
-        onPointerLeave={cancelHold}
-      >
-        {/* Centre: time, hint, and the solution once you stop. Drawn first so the corners sit on top */}
-        <div className="trainer-center">
-          <div className="time">{formatTime(elapsed)}</div>
-          <div className="hint">{PHASE_HINT[phase]}</div>
+    <div
+      className="trainer-zone"
+      data-phase={phase}
+      onPointerDown={press}
+      onPointerUp={release}
+      onPointerCancel={cancelHold}
+      onPointerLeave={cancelHold}
+    >
+      {/* Centre: time, hint, and the solution once you stop. Drawn first so the corners sit on top */}
+      <div className="trainer-center">
+        <div className="time">{formatTime(elapsed)}</div>
+        <div className="hint">{PHASE_HINT[phase]}</div>
 
-          {/* Solution: hidden until the timer stops */}
-          {phase === 'stopped' && (
-            <div className="panel solution">
-              <h2>
-                {current.alg.name} <span className="cat">{current.alg.category}</span>
-              </h2>
-              <p className="mono-box">{current.alg.alg}</p>
-              {(current.pre || current.post) && (
-                <p className="auf">
-                  {current.pre && <>Pre-AUF: {current.pre}. </>}
-                  {current.post && <>Post-AUF: {current.post}.</>}
-                </p>
-              )}
-            </div>
-          )}
-        </div>
-
-        {/* Top left: the case. key= remounts the player so it never shows a stale case */}
-        <div className="panel trainer-case" onPointerDown={stop} onPointerUp={stop}>
-          <CubeView key={current.solution} alg={current.solution} category={current.alg.category} mode={viewMode} size={180} />
-          <div className="case-text">
-            <p className="case-label">Scramble (yellow top, green front)</p>
-            <p className="mono-box">{current.scramble}</p>
+        {/* Solution: hidden until the timer stops */}
+        {phase === 'stopped' && (
+          <div className="panel solution">
+            <h2>
+              {current.alg.name} <span className="cat">{current.alg.category}</span>
+            </h2>
+            <p className="mono-box">{current.alg.alg}</p>
+            {(current.pre || current.post) && (
+              <p className="auf">
+                {current.pre && <>Pre-AUF: {current.pre}. </>}
+                {current.post && <>Post-AUF: {current.post}.</>}
+              </p>
+            )}
           </div>
-        </div>
-
-        {/* Top right: view options */}
-        <div className="trainer-tools" onPointerDown={stop} onPointerUp={stop}>
-          <span className="muted">Training {pool.length} case{pool.length === 1 ? '' : 's'}</span>
-          <div className="seg">
-            <button className={btnClass(viewMode === '2D')} onClick={act(() => setViewMode('2D'))}>2D</button>
-            <button className={btnClass(viewMode === '3D')} onClick={act(() => setViewMode('3D'))}>3D</button>
-          </div>
-          <button className="btn" onClick={act(onBack)}>Change cases</button>
-        </div>
-
-        {/* Bottom left */}
-        <div className="trainer-bottom" onPointerDown={stop} onPointerUp={stop}>
-          <button className="btn" onClick={act(skip)}>Skip case</button>
-          {hasSolveForCase && (
-            <button className="btn" onClick={act(() => onDeleteLast(current.alg.id))}>Delete last time</button>
-          )}
-        </div>
+        )}
       </div>
+      <div className="trainer-scramble-box">
+        <p className="mono-box trainer-scramble">{current.scramble}</p>
+        <p className="case-label">Scramble (yellow top, green front)</p>
+      </div>
+      {/* Top left: the case (hidden until you solve). key= remounts the player so it never shows a stale case */}
+      <div className="panel trainer-case" onPointerDown={stop} onPointerUp={stop}>
+        <div className={revealed ? 'case-view' : 'case-view hidden'}>
+          <CubeView key={current.solution} alg={current.solution} category={current.alg.category} mode={viewMode} size={180} />
+          {!revealed && <span className="case-q">?</span>}
+        </div>
+        <p className="case-label">{revealed ? 'This was the case' : 'Case shows after you solve'}</p>
+      </div>
+
+      {/* Top right: view options */}
+      <div className="trainer-tools" onPointerDown={stop} onPointerUp={stop}>
+        <span className="muted">Training {pool.length} case{pool.length === 1 ? '' : 's'}</span>
+        <div className="seg">
+          <button className={btnClass(viewMode === '2D')} onClick={act(() => setViewMode('2D'))}>2D</button>
+          <button className={btnClass(viewMode === '3D')} onClick={act(() => setViewMode('3D'))}>3D</button>
+        </div>
+        <button className="btn" onClick={act(onBack)}>Change cases</button>
+      </div>
+
+      {/* Bottom left */}
+      <div className="trainer-bottom" onPointerDown={stop} onPointerUp={stop}>
+        <button className="btn" onClick={act(skip)}>Skip case</button>
+        {hasSolveForCase && (
+          <button className="btn" onClick={act(() => onDeleteLast(current.alg.id))}>Delete last time</button>
+        )}
+      </div>
+    </div>
   );
 
   return (

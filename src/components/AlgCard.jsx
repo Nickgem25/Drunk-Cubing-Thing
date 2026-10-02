@@ -57,7 +57,7 @@ const AlgCard = memo(function AlgCard({ alg, status, selected, onToggleStatus, o
           <CubeView alg={alg.alg} category={alg.category} mode={viewMode} />
         </div>
 
-        <p style={{ fontFamily: 'monospace', background: '#2d2d2d', padding: '10px', borderRadius: '6px', fontSize: '0.9rem', margin: '12px 0', wordBreak: 'break-all', textAlign: 'center', letterSpacing: '0.5px' }}>
+        <p style={{ fontFamily: 'var(--mono)', background: '#2d2d2d', padding: '10px', borderRadius: '6px', fontSize: '0.9rem', margin: '12px 0', wordBreak: 'break-all', textAlign: 'center', letterSpacing: '0.5px' }}>
           {alg.alg}
         </p>
 

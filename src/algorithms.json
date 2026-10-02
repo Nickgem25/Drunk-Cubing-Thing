@@ -3,28 +3,624 @@
         "id": "pll-t-perm",
         "name": "T-Perm",
         "category": "PLL",
+        "subcategory": "Adjacent Swap",
         "alg": "R U R' U' R' F R2 U' R' U' R U R' F'",
-        "notes": "Watch the thumb regrip on the F move."
+        "notes": ""
     },
     {
         "id": "pll-y-perm",
         "name": "Y-Perm",
         "category": "PLL",
+        "subcategory": "Diagonal Swap",
         "alg": "F R U' R' U' R U R' F' R U R' U' R' F R F'",
-        "notes": "Starts with F (R U' R' U')."
+        "notes": ""
+    },
+    {
+        "id": "pll-ua-perm",
+        "name": "Ua-Perm",
+        "category": "PLL",
+        "subcategory": "Edges Only",
+        "alg": "R U' R U R U R U' R' U' R2",
+        "notes": ""
+    },
+    {
+        "id": "pll-ub-perm",
+        "name": "Ub-Perm",
+        "category": "PLL",
+        "subcategory": "Edges Only",
+        "alg": "R2 U R U R' U' R' U' R' U R'",
+        "notes": ""
+    },
+    {
+        "id": "pll-h-perm",
+        "name": "H-Perm",
+        "category": "PLL",
+        "subcategory": "Edges Only",
+        "alg": "M2 U' M2 U2 M2 U' M2",
+        "notes": ""
+    },
+    {
+        "id": "pll-z-perm",
+        "name": "Z-Perm",
+        "category": "PLL",
+        "subcategory": "Edges Only",
+        "alg": "M2 U' M2 U' M' U2 M2 U2 M' U2",
+        "notes": ""
+    },
+    {
+        "id": "pll-aa-perm",
+        "name": "Aa-Perm",
+        "category": "PLL",
+        "subcategory": "Corners Only",
+        "alg": "x R' U R' D2 R U' R' D2 R2 x'",
+        "notes": ""
+    },
+    {
+        "id": "pll-ab-perm",
+        "name": "Ab-Perm",
+        "category": "PLL",
+        "subcategory": "Corners Only",
+        "alg": "x R2 D2 R U R' D2 R U' R x'",
+        "notes": ""
+    },
+    {
+        "id": "pll-e-perm",
+        "name": "E-Perm",
+        "category": "PLL",
+        "subcategory": "Corners Only",
+        "alg": "x' R U' R' D R U R' D' R U R' D R U' R' D' x",
+        "notes": ""
+    },
+    {
+        "id": "pll-ja-perm",
+        "name": "Ja-Perm",
+        "category": "PLL",
+        "subcategory": "Adjacent Swap",
+        "alg": "x R2 F R F' R U2 r' U r U2 x'",
+        "notes": ""
+    },
+    {
+        "id": "pll-jb-perm",
+        "name": "Jb-Perm",
+        "category": "PLL",
+        "subcategory": "Adjacent Swap",
+        "alg": "R U R' F' R U R' U' R' F R2 U' R'",
+        "notes": ""
+    },
+    {
+        "id": "pll-ra-perm",
+        "name": "Ra-Perm",
+        "category": "PLL",
+        "subcategory": "Adjacent Swap",
+        "alg": "R U' R' U' R U R D R' U' R D' R' U2 R'",
+        "notes": ""
+    },
+    {
+        "id": "pll-rb-perm",
+        "name": "Rb-Perm",
+        "category": "PLL",
+        "subcategory": "Adjacent Swap",
+        "alg": "R' U2 R U2 R' F R U R' U' R' F' R2",
+        "notes": ""
+    },
+    {
+        "id": "pll-f-perm",
+        "name": "F-Perm",
+        "category": "PLL",
+        "subcategory": "Adjacent Swap",
+        "alg": "R' U' F' R U R' U' R' F R2 U' R' U' R U R' U R",
+        "notes": ""
+    },
+    {
+        "id": "pll-na-perm",
+        "name": "Na-Perm",
+        "category": "PLL",
+        "subcategory": "Diagonal Swap",
+        "alg": "R U R' U R U R' F' R U R' U' R' F R2 U' R' U2 R U' R'",
+        "notes": ""
+    },
+    {
+        "id": "pll-nb-perm",
+        "name": "Nb-Perm",
+        "category": "PLL",
+        "subcategory": "Diagonal Swap",
+        "alg": "R' U R U' R' F' U' F R U R' F R' F' R U' R",
+        "notes": ""
+    },
+    {
+        "id": "pll-v-perm",
+        "name": "V-Perm",
+        "category": "PLL",
+        "subcategory": "Diagonal Swap",
+        "alg": "R' U R' U' R D' R' D R' U D' R2 U' R2 D R2",
+        "notes": ""
+    },
+    {
+        "id": "pll-ga-perm",
+        "name": "Ga-Perm",
+        "category": "PLL",
+        "subcategory": "G Perms",
+        "alg": "R2 U R' U R' U' R U' R2 D U' R' U R D'",
+        "notes": ""
+    },
+    {
+        "id": "pll-gb-perm",
+        "name": "Gb-Perm",
+        "category": "PLL",
+        "subcategory": "G Perms",
+        "alg": "R' U' R U D' R2 U R' U R U' R U' R2 D",
+        "notes": ""
+    },
+    {
+        "id": "pll-gc-perm",
+        "name": "Gc-Perm",
+        "category": "PLL",
+        "subcategory": "G Perms",
+        "alg": "R2 U' R U' R U R' U R2 D' U R U' R' D",
+        "notes": ""
+    },
+    {
+        "id": "pll-gd-perm",
+        "name": "Gd-Perm",
+        "category": "PLL",
+        "subcategory": "G Perms",
+        "alg": "R U R' U' D R2 U' R U' R' U R' U R2 D'",
+        "notes": ""
+    },
+    {
+        "id": "oll-1",
+        "name": "OLL 1",
+        "category": "OLL",
+        "subcategory": "Dot Case",
+        "alg": "R U2 R2 F R F' U2 R' F R F'",
+        "notes": ""
+    },
+    {
+        "id": "oll-2",
+        "name": "OLL 2",
+        "category": "OLL",
+        "subcategory": "Dot Case",
+        "alg": "F R U R' U' F' f R U R' U' f'",
+        "notes": ""
+    },
+    {
+        "id": "oll-3",
+        "name": "OLL 3",
+        "category": "OLL",
+        "subcategory": "Dot Case",
+        "alg": "y' f R U R' U' f' U' F R U R' U' F'",
+        "notes": ""
+    },
+    {
+        "id": "oll-4",
+        "name": "OLL 4",
+        "category": "OLL",
+        "subcategory": "Dot Case",
+        "alg": "y' f R U R' U' f' U F R U R' U' F'",
+        "notes": ""
+    },
+    {
+        "id": "oll-5",
+        "name": "OLL 5",
+        "category": "OLL",
+        "subcategory": "Square Shapes",
+        "alg": "r' U2 R U R' U r",
+        "notes": ""
+    },
+    {
+        "id": "oll-6",
+        "name": "OLL 6",
+        "category": "OLL",
+        "subcategory": "Square Shapes",
+        "alg": "r U2 R' U' R U' r'",
+        "notes": ""
+    },
+    {
+        "id": "oll-7",
+        "name": "OLL 7",
+        "category": "OLL",
+        "subcategory": "Lightning Shapes",
+        "alg": "r U R' U R U2 r'",
+        "notes": ""
+    },
+    {
+        "id": "oll-8",
+        "name": "OLL 8",
+        "category": "OLL",
+        "subcategory": "Lightning Shapes",
+        "alg": "y2 r' U' R U' R' U2 r",
+        "notes": ""
+    },
+    {
+        "id": "oll-9",
+        "name": "OLL 9",
+        "category": "OLL",
+        "subcategory": "Fish Shapes",
+        "alg": "y R U R' U' R' F R2 U R' U' F'",
+        "notes": ""
+    },
+    {
+        "id": "oll-10",
+        "name": "OLL 10",
+        "category": "OLL",
+        "subcategory": "Fish Shapes",
+        "alg": "R U R' U R' F R F' R U2 R'",
+        "notes": ""
+    },
+    {
+        "id": "oll-11",
+        "name": "OLL 11",
+        "category": "OLL",
+        "subcategory": "Lightning Shapes",
+        "alg": "M R U R' U R U2 R' U M'",
+        "notes": ""
+    },
+    {
+        "id": "oll-12",
+        "name": "OLL 12",
+        "category": "OLL",
+        "subcategory": "Lightning Shapes",
+        "alg": "y' M' R' U' R U' R' U2 R U' M",
+        "notes": ""
+    },
+    {
+        "id": "oll-13",
+        "name": "OLL 13",
+        "category": "OLL",
+        "subcategory": "Knight Move Shapes",
+        "alg": "r U' r' U' r U r' F' U F",
+        "notes": ""
+    },
+    {
+        "id": "oll-14",
+        "name": "OLL 14",
+        "category": "OLL",
+        "subcategory": "Knight Move Shapes",
+        "alg": "R' F R U R' F' R F U' F'",
+        "notes": ""
+    },
+    {
+        "id": "oll-15",
+        "name": "OLL 15",
+        "category": "OLL",
+        "subcategory": "Knight Move Shapes",
+        "alg": "r' U' r R' U' R U r' U r",
+        "notes": ""
+    },
+    {
+        "id": "oll-16",
+        "name": "OLL 16",
+        "category": "OLL",
+        "subcategory": "Knight Move Shapes",
+        "alg": "r U r' R U R' U' r U' r'",
+        "notes": ""
+    },
+    {
+        "id": "oll-17",
+        "name": "OLL 17",
+        "category": "OLL",
+        "subcategory": "Dot Case",
+        "alg": "R U R' U R' F R F' U2 R' F R F'",
+        "notes": ""
+    },
+    {
+        "id": "oll-18",
+        "name": "OLL 18",
+        "category": "OLL",
+        "subcategory": "Dot Case",
+        "alg": "y R U2 R2 F R F' U2 M' U R U' r'",
+        "notes": ""
+    },
+    {
+        "id": "oll-19",
+        "name": "OLL 19",
+        "category": "OLL",
+        "subcategory": "Dot Case",
+        "alg": "M U R U R' U' M' R' F R F'",
+        "notes": ""
+    },
+    {
+        "id": "oll-20",
+        "name": "OLL 20",
+        "category": "OLL",
+        "subcategory": "Dot Case",
+        "alg": "r U R' U' M2 U R U' R' U' M'",
+        "notes": ""
+    },
+    {
+        "id": "oll-21",
+        "name": "OLL 21 (H)",
+        "category": "OLL",
+        "subcategory": "OCLL",
+        "alg": "R U R' U R U' R' U R U2 R'",
+        "notes": ""
+    },
+    {
+        "id": "oll-22",
+        "name": "OLL 22 (Pi)",
+        "category": "OLL",
+        "subcategory": "OCLL",
+        "alg": "R U2 R2 U' R2 U' R2 U2 R",
+        "notes": ""
+    },
+    {
+        "id": "oll-23",
+        "name": "OLL 23 (Headlights)",
+        "category": "OLL",
+        "subcategory": "OCLL",
+        "alg": "R2 D R' U2 R D' R' U2 R'",
+        "notes": ""
+    },
+    {
+        "id": "oll-24",
+        "name": "OLL 24 (Chameleon)",
+        "category": "OLL",
+        "subcategory": "OCLL",
+        "alg": "r U R' U' r' F R F'",
+        "notes": ""
+    },
+    {
+        "id": "oll-25",
+        "name": "OLL 25 (Bowtie)",
+        "category": "OLL",
+        "subcategory": "OCLL",
+        "alg": "y F' r U R' U' r' F R",
+        "notes": ""
+    },
+    {
+        "id": "oll-26",
+        "name": "OLL 26 (Anti-Sune)",
+        "category": "OLL",
+        "subcategory": "OCLL",
+        "alg": "y R U2 R' U' R U' R'",
+        "notes": ""
     },
     {
         "id": "oll-27-sune",
         "name": "OLL 27 (Sune)",
         "category": "OLL",
+        "subcategory": "OCLL",
         "alg": "R U R' U R U2 R'",
         "notes": "Classic Sune. Fish pointing bottom-left."
     },
     {
-        "id": "oll-21-h",
-        "name": "OLL 21 (H)",
+        "id": "oll-28",
+        "name": "OLL 28",
         "category": "OLL",
-        "alg": "R U2 R' U' R U R' U' R U' R'",
-        "notes": "Your note here."
+        "subcategory": "All Corners Oriented",
+        "alg": "r U R' U' M U R U' R'",
+        "notes": ""
+    },
+    {
+        "id": "oll-29",
+        "name": "OLL 29",
+        "category": "OLL",
+        "subcategory": "Awkward Shapes",
+        "alg": "y R U R' U' R U' R' F' U' F R U R'",
+        "notes": ""
+    },
+    {
+        "id": "oll-30",
+        "name": "OLL 30",
+        "category": "OLL",
+        "subcategory": "Awkward Shapes",
+        "alg": "y2 F U R U2 R' U' R U2 R' U' F'",
+        "notes": ""
+    },
+    {
+        "id": "oll-31",
+        "name": "OLL 31",
+        "category": "OLL",
+        "subcategory": "P Shapes",
+        "alg": "R' U' F U R U' R' F' R",
+        "notes": ""
+    },
+    {
+        "id": "oll-32",
+        "name": "OLL 32",
+        "category": "OLL",
+        "subcategory": "P Shapes",
+        "alg": "S R U R' U' R' F R f'",
+        "notes": ""
+    },
+    {
+        "id": "oll-33",
+        "name": "OLL 33",
+        "category": "OLL",
+        "subcategory": "T Shapes",
+        "alg": "R U R' U' R' F R F'",
+        "notes": ""
+    },
+    {
+        "id": "oll-34",
+        "name": "OLL 34",
+        "category": "OLL",
+        "subcategory": "C Shapes",
+        "alg": "y2 R U R2 U' R' F R U R U' F'",
+        "notes": ""
+    },
+    {
+        "id": "oll-35",
+        "name": "OLL 35",
+        "category": "OLL",
+        "subcategory": "Fish Shapes",
+        "alg": "R U2 R2 F R F' R U2 R'",
+        "notes": ""
+    },
+    {
+        "id": "oll-36",
+        "name": "OLL 36",
+        "category": "OLL",
+        "subcategory": "W Shapes",
+        "alg": "y2 L' U' L U' L' U L U L F' L' F",
+        "notes": ""
+    },
+    {
+        "id": "oll-37",
+        "name": "OLL 37",
+        "category": "OLL",
+        "subcategory": "Fish Shapes",
+        "alg": "F R U' R' U' R U R' F'",
+        "notes": ""
+    },
+    {
+        "id": "oll-38",
+        "name": "OLL 38",
+        "category": "OLL",
+        "subcategory": "W Shapes",
+        "alg": "R U R' U R U' R' U' R' F R F'",
+        "notes": ""
+    },
+    {
+        "id": "oll-39",
+        "name": "OLL 39",
+        "category": "OLL",
+        "subcategory": "Lightning Shapes",
+        "alg": "y L F' L' U' L U F U' L'",
+        "notes": ""
+    },
+    {
+        "id": "oll-40",
+        "name": "OLL 40",
+        "category": "OLL",
+        "subcategory": "Lightning Shapes",
+        "alg": "y R' F R U R' U' F' U R",
+        "notes": ""
+    },
+    {
+        "id": "oll-41",
+        "name": "OLL 41",
+        "category": "OLL",
+        "subcategory": "Awkward Shapes",
+        "alg": "y2 R U R' U R U2 R' F R U R' U' F'",
+        "notes": ""
+    },
+    {
+        "id": "oll-42",
+        "name": "OLL 42",
+        "category": "OLL",
+        "subcategory": "Awkward Shapes",
+        "alg": "R' U' R U' R' U2 R F R U R' U' F'",
+        "notes": ""
+    },
+    {
+        "id": "oll-43",
+        "name": "OLL 43",
+        "category": "OLL",
+        "subcategory": "P Shapes",
+        "alg": "y R' U' F' U F R",
+        "notes": ""
+    },
+    {
+        "id": "oll-44",
+        "name": "OLL 44",
+        "category": "OLL",
+        "subcategory": "P Shapes",
+        "alg": "f R U R' U' f'",
+        "notes": ""
+    },
+    {
+        "id": "oll-45",
+        "name": "OLL 45",
+        "category": "OLL",
+        "subcategory": "T Shapes",
+        "alg": "F R U R' U' F'",
+        "notes": ""
+    },
+    {
+        "id": "oll-46",
+        "name": "OLL 46",
+        "category": "OLL",
+        "subcategory": "C Shapes",
+        "alg": "R' U' R' F R F' U R",
+        "notes": ""
+    },
+    {
+        "id": "oll-47",
+        "name": "OLL 47",
+        "category": "OLL",
+        "subcategory": "L Shapes",
+        "alg": "F' L' U' L U L' U' L U F",
+        "notes": ""
+    },
+    {
+        "id": "oll-48",
+        "name": "OLL 48",
+        "category": "OLL",
+        "subcategory": "L Shapes",
+        "alg": "F R U R' U' R U R' U' F'",
+        "notes": ""
+    },
+    {
+        "id": "oll-49",
+        "name": "OLL 49",
+        "category": "OLL",
+        "subcategory": "L Shapes",
+        "alg": "y2 r U' r2 U r2 U r2 U' r",
+        "notes": ""
+    },
+    {
+        "id": "oll-50",
+        "name": "OLL 50",
+        "category": "OLL",
+        "subcategory": "L Shapes",
+        "alg": "r' U r2 U' r2 U' r2 U r'",
+        "notes": ""
+    },
+    {
+        "id": "oll-51",
+        "name": "OLL 51",
+        "category": "OLL",
+        "subcategory": "Line Shapes",
+        "alg": "f R U R' U' R U R' U' f'",
+        "notes": ""
+    },
+    {
+        "id": "oll-52",
+        "name": "OLL 52",
+        "category": "OLL",
+        "subcategory": "Line Shapes",
+        "alg": "y2 R' F' U' F U' R U R' U R",
+        "notes": ""
+    },
+    {
+        "id": "oll-53",
+        "name": "OLL 53",
+        "category": "OLL",
+        "subcategory": "L Shapes",
+        "alg": "r' U' R U' R' U R U' R' U2 r",
+        "notes": ""
+    },
+    {
+        "id": "oll-54",
+        "name": "OLL 54",
+        "category": "OLL",
+        "subcategory": "L Shapes",
+        "alg": "r U R' U R U' R' U R U2 r'",
+        "notes": ""
+    },
+    {
+        "id": "oll-55",
+        "name": "OLL 55",
+        "category": "OLL",
+        "subcategory": "Line Shapes",
+        "alg": "R U2 R2 U' R U' R' U2 F R F'",
+        "notes": ""
+    },
+    {
+        "id": "oll-56",
+        "name": "OLL 56",
+        "category": "OLL",
+        "subcategory": "Line Shapes",
+        "alg": "r U r' U R U' R' U R U' R' r U' r'",
+        "notes": ""
+    },
+    {
+        "id": "oll-57",
+        "name": "OLL 57",
+        "category": "OLL",
+        "subcategory": "All Corners Oriented",
+        "alg": "R U R' U' M' U R U' r'",
+        "notes": ""
     }
 ]
